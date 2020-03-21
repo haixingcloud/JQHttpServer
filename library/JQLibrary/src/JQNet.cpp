@@ -127,7 +127,7 @@ bool JQNet::HTTP::get(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 void JQNet::HTTP::get(
@@ -183,7 +183,7 @@ bool JQNet::HTTP::deleteResource(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 void JQNet::HTTP::deleteResource(
@@ -243,7 +243,7 @@ bool JQNet::HTTP::post(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 bool JQNet::HTTP::post(
@@ -279,7 +279,7 @@ bool JQNet::HTTP::post(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 void JQNet::HTTP::post(
@@ -337,7 +337,7 @@ bool JQNet::HTTP::put(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 bool JQNet::HTTP::put(
@@ -373,7 +373,7 @@ bool JQNet::HTTP::put(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 void JQNet::HTTP::put(
@@ -432,7 +432,7 @@ bool JQNet::HTTP::patch(
         }
     );
 
-    return eventLoop.exec() && !failFlag;
+    return eventLoop.exec(QEventLoop::ExcludeUserInputEvents) && !failFlag;
 }
 
 void JQNet::HTTP::patch(

@@ -923,7 +923,7 @@ bool JQHttpServer::AbstractManage::startServerThread()
 
         semaphore.release( 1 );
 
-        eventLoop.exec();
+        eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
 
         this->onFinish();
     } );
